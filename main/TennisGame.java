@@ -3,7 +3,6 @@ import java.util.HashMap;
 public class TennisGame implements ScoreBoard {
 
     private static final String DEUCE = "Deuce";
-    private static final String ADVANTAGE ="Advantage" ;
     private String button;
     int playerOneScore=0;
     int playerTwoScore=0;
@@ -33,7 +32,7 @@ public class TennisGame implements ScoreBoard {
     }
 
     @Override
-    public int getScore() {
+    public int getWhichPlayerScored() {
         return isPlayer1Scored() ? playerOneScore : playerTwoScore;
 
     }
@@ -51,7 +50,7 @@ public class TennisGame implements ScoreBoard {
     @Override
     public String getPlayerTotalScore() {
         if(checkDeuceGame()) return DEUCE;
-        else if(advantageGame()) return ADVANTAGE;
+        else if(advantageGame()) return player.displayAdvantageString();
         else return getRunningScoreDisplay();
 
     }
@@ -85,7 +84,7 @@ public class TennisGame implements ScoreBoard {
 
     @Override
     public String getRunningScore() {
-        return String.valueOf(runningScore.get(getScore()));
+        return String.valueOf(runningScore.get(getWhichPlayerScored()));
     }
 
 

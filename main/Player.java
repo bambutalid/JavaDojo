@@ -30,4 +30,8 @@ public class Player {
         if(playerNumber==1) game.playerOneScore=score;
                 else game.playerTwoScore=score;
     }
+
+    public String displayAdvantageString() {
+        return playerNumber == 1 ? "Advantage point for player 1" :  "Advantage point for player 2";
+    }
 }

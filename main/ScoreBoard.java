@@ -1,7 +1,7 @@
 public interface ScoreBoard {
     String pressButton(Player player);
 
-    int getScore();
+    int getWhichPlayerScored();
 
     String getPlayerTotalScore();
 
