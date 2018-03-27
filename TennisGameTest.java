@@ -80,7 +80,7 @@ public class TennisGameTest {
         pressButtonForPlayer(player1, 3);
         pressButtonForPlayer(player2, 3);
         pressButtonForPlayer(player1, 1);
-        assertEquals("Advantage", game.getPlayerTotalScore());
+        assertEquals("Advantage point for player 1", game.getPlayerTotalScore());
     }
 
     @Test
@@ -101,15 +101,15 @@ public class TennisGameTest {
         pressButtonForPlayer(player2, 3);
         assertEquals("Deuce", game.getPlayerTotalScore());
         pressButtonForPlayer(player1, 1);
-        assertEquals("Advantage", game.getPlayerTotalScore());
+        assertEquals("Advantage point for player 1", game.getPlayerTotalScore());
         pressButtonForPlayer(player2, 1);
         assertEquals("Deuce", game.getPlayerTotalScore());
         pressButtonForPlayer(player2, 1);
-        assertEquals("Advantage", game.getPlayerTotalScore());
+        assertEquals("Advantage point for player 2", game.getPlayerTotalScore());
         pressButtonForPlayer(player1, 1);
         assertEquals("Deuce", game.getPlayerTotalScore());
         pressButtonForPlayer(player1, 1);
-        assertEquals("Advantage", game.getPlayerTotalScore());
+        assertEquals("Advantage point for player 1", game.getPlayerTotalScore());
         pressButtonForPlayer(player1, 1);
         assertEquals("Win for player1", game.getWinner());
     }
